@@ -1,7 +1,7 @@
 const Sequelize = require('sequelize');
 require('dotenv').config();
 
-
+// corrected formatting to properly run on localhost
 const sequelize = new Sequelize(
   process.env.DB_NAME, 
   process.env.DB_USER, 
