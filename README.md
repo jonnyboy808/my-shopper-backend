@@ -4,7 +4,7 @@
 
 ## Links
 
-[Walkthrough Video](https://drive.google.com/file/d/18WBr8RQV13kEfQv5ofctMnUrrCUSzSpj/view)
+[Walkthrough Video](https://drive.google.com/file/d/1pPk3p78dewEXlqegHU1T5IhvrfWoZ0OO/view)
 
 ## Table of Contents
 
@@ -25,7 +25,7 @@ This is a backend application that allows for easy tracking of your e-commerce s
 This a backend application would require forking to use. Simply fork the application to your local machine and start using an application like Insomnia to run GET, Put, Post, and Delete request.
 
 ## Code Example
-Below is an example of working to filter out an item by its provided id
+Below is an example of code working to filter out an item by its provided id
 ```JS
 // finds a single product by its 'id'
 // and returns a status response
@@ -50,14 +50,14 @@ router.get('/:id', async (req, res) => {
 ## Application Examples
 Bellow are a couple examples of the application when in use
 
-The first example shows the list that it prompted when the application is first ran.
-![List Example](./assets/images/list-example.png)
+The first example shows all categories with a GET request.
+![List Example](./assets/images/get-request.png)
 
 ---
 
-The second screenshot is an example of a table displaying all employees and information.
+This second screenshot is an example of POST request that creates a category.
 
-![Table Example](./assets/images/table-example.png)
+![Table Example](./assets/images/post-request.png)
 
 ## Usage
 Make sure you have followed the instructions within the [Installation](#installation) section of the README to start using this application, if not already done so. The use of the command line interface is required to first use this application. To get started first run the database by running the schema with mySQL, second use npm run seed to seed the database, and lastly run npm start to initiate the localhost to test. After the build, use an application like Insomnia to test your e-commerce site to pull the requested information, or pull individual items. This can also be used to test out adding additional items or deleting no longer needed items.
@@ -65,9 +65,9 @@ Make sure you have followed the instructions within the [Installation](#installa
 
 
 ## License
-![MIT Badge](https://img.shields.io/badge/license-MIT-green)
-
 For additional information on this license please use the provided link
+
+![MIT Badge](https://img.shields.io/badge/license-MIT-green)
 
 [MIT License](https://choosealicense.com/licenses/mit/)
 

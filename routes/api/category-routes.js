@@ -1,8 +1,6 @@
 const router = require('express').Router();
 const { Category, Product } = require('../../models');
 
-// The `/api/categories` endpoint
-
 // finds all categories
 router.get('/', async (req, res) => {
   try {
@@ -24,7 +22,7 @@ router.get('/:id', async (req, res) => {
     });
 
     if (!getOneCategory) {
-      res.status(404).json({ message: `No category found with id${id}` });
+      res.status(404).json({ message: `No category with id ${id} found` });
       return;
     }
     res.status(200).json(getOneCategory);
@@ -59,12 +57,11 @@ router.put('/:id', async (req, res) => {
         }
       }
     );
-
     if (!updateCategory) {
-      res.status(404).json({ message: `No category found with id${id}` });
+      res.status(404).json({ message: `No category with id ${id} found` });
       return;
     };
-    res.status(200).json({ message: `Category with id${id} successfully updated!` })
+    res.status(200).json({ message: `Category with id ${id} successfully updated!` })
   } catch (err) {
   }
 });
@@ -78,11 +75,10 @@ router.delete('/:id', async (req, res) => {
         id: id
       }
     })
-
     if (!deletedCategory) {
-      res.status(404).json({ message: `No category found with id${id}` })
+      res.status(404).json({ message: `No category with id ${id} found` })
     }
-    res.status(200).json({ message: `Category with id${id} successfully deleted!` })
+    res.status(200).json({ message: `Category with id ${id} successfully deleted!` })
   } catch (err) {
     res.status(400).json(err)
   }
