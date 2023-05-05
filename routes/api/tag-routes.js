@@ -63,7 +63,7 @@ router.put('/:id', (req, res) => {
       id: req.params.id,
     },
   })
-    .then((tag) => {
+    .then(() => {
       // finds all tags from productTag
       return ProductTag.findAll({ where: { tag_id: req.params.id } });
     })
